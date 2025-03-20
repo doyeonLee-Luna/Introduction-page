@@ -5,12 +5,10 @@
 📌 **Live Demo:** [melodic-figolla-697d3f.netlify.app](https://melodic-figolla-697d3f.netlify.app)  
 
 
-<video width="100%" controls>
-  <source src="페이지_화면.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-![Page Preview](페이지_화면.gif)
+![Page Preview1](page1.png)
+![Page Preview2](page2.png)
+![Page Preview3](page3.png)
+![Page Preview4](page4.png)
 
 ## ✨ Features  
 ✅ Simple and clean UI  
