@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+    /* 페이지 내 스크롤 이동 부드럽게 설정 */
+}
+
+.header,
+.footer {
+    border-bottom: 2px solid #ddd;
+    /* 위아래 경계선 */
+    padding: 10px 0;
+}
+
+.divider {
+    width: 100%;
+    margin: 20px 0;
+    border-top: 2px dashed #aaa;
+    /* 점선 스타일 */
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: center;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    /* 🔽 변경: absolute → relative */
+    position: relative;
+    margin: 100px auto;
+    /* 자동 정렬 및 위아래 여백 추가 */
+    animation: float 3s ease-in-out infinite;
+    /* 애니메이션을 부여 */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 애니메이션 키프레임 */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        /* 처음에는 제자리 */
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* 위로 떠오름 */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* 다시 원래 위치로 */
+    }
+}
+
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+.memoji {
+    width: 200px;
+    height: auto
+        /* border-radius: 50%;
+    margin-bottom: 10px; */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    vertical-align: middle;
+    
+
+}
+
+.social-icons a {
+    margin: 0 10px;
+    /* 아이콘 사이 간격 */
+    transition: transform 0.3s ease;
+    /* 부드러운 확대 효과 */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    /* 아이콘 확대 */
+}
+
+
+h1 {
+
+    font-size: 30px;
+    margin: 0;
+    color: #5f6a7d;
+    font-family: "Emblema One", system-ui;
+    /* font-family: 'Sail', cursive; */
+    color: #5f6a7d;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.comment {
+    font-size: 10px;
+    color: darkgray;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+    /* 첫 번째 항목(아이콘)을 왼쪽 정렬 */
+    align-items: center;
+    /* 세로 가운데 정렬 */
+    padding: 10px 20px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    /* 버튼들을 가운데 정렬 */
+    gap: 20px;
+    flex-grow: 1;
+    /* 버튼들이 가운데로 밀리도록 설정 */
+    align-items: center;
+    /* 세로 가운데 정렬 */
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #5f6a7d;
+    font-size: 18px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    width: 150px;
+    /* 버튼의 고정 크기 */
+    text-overflow: ellipsis;
+    /* 글자가 넘칠 경우 '...'로 표시 */
+    white-space: nowrap;
+    /* 텍스트가 한 줄로 유지되도록 설정 */
+    overflow: hidden;
+    /* 텍스트가 넘치면 숨김 처리 */
+}
+
+.btn:hover {
+    background: #f7f7f7;
+    transform: scale(1.05);
+}
+
+
+.sign-image {
+    width: 500px;
+    height: 500px;
+    transition: transform 0.3s;
+    position: fixed;
+    /* 페이지에 고정 */
+    bottom: 10px;
+    /* 화면 아래에서 10px 떨어짐 */
+    right: 10px;
+    /* 화면 오른쪽에서 10px 떨어짐 */
+    z-index: 10;
+    /* 다른 요소들 위에 표시 */
+
+}
+
+#scrollToTopBtn {
+    display: inline-block;
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #5f6a7d;
+    font-size: 18px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    width: 150px;
+    /* 버튼의 고정 크기 */
+    text-overflow: ellipsis;
+    /* 글자가 넘칠 경우 '...'로 표시 */
+    white-space: nowrap;
+    /* 텍스트가 한 줄로 유지되도록 설정 */
+    overflow: hidden;
+    /* 텍스트가 넘치면 숨김 처리 */
+    border: none;
+}
+
+#scrollToTopBtn:hover {
+    background: #f7f7f7;
+    transform: scale(1.05);
+}
+
+
+
+.content {
+    margin-top: 500px;
+    /* .container 아래 여백 추가 */
+}
+
+
+
+#myFluffySection {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#myFluffySection h1 {
+    font-size: 36px;
+    color: #5f6a7d;
+    margin-bottom: 20px;
+}
+
+#myFluffySection h2 {
+    font-size: 24px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.dog-gallery {
+    display: flex;
+    justify-content: space-around;
+    /* 강아지 사진들을 고르게 배치 */
+    gap: 30px;
+    /* 이미지 사이 간격 */
+    flex-wrap: wrap;
+    /* 화면 크기에 맞게 이미지가 줄바꿈 되도록 */
+}
+
+.dog-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    /* 이미지와 텍스트를 포함한 각 아이템의 고정 너비 */
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    /* 애니메이션을 부여 */
+}
+
+.dog-image {
+    width: 100%;
+    /* 사진이 부모 컨테이너에 꽉 차도록 */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    /* 이미지 확대 효과 */
+}
+
+.dog-item:hover .dog-image {
+    transform: scale(1.1);
+    /* 마우스 오버 시 이미지 확대 */
+}
+
+.dog-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ########## MBTI
+    /* MBTI 섹션 디자인 */
+#mbtiSection {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* MBTI 항목들을 나열하는 갤러리 스타일 */
+.mbti-gallery {
+    display: flex;
+    justify-content: space-around;
+    /* 항목들 간격을 고르게 배치 */
+    gap: 30px;
+    /* 항목들 사이 간격 */
+    flex-wrap: wrap;
+    /* 화면 크기에 맞게 항목들이 줄바꿈 되도록 */
+}
+
+/* 각 MBTI 항목을 스타일링 */
+.mbti-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    /* 고정 너비 */
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    /* 애니메이션을 부여 */
+}
+
+/* 이미지 스타일 */
+.mbti-image {
+    width: 40%;
+    /* 사진이 부모 컨테이너에 꽉 차도록 */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    /* 이미지 확대 효과 */
+
+}
+
+/* 항목에 마우스를 올리면 이미지 확대 */
+.mbti-item:hover .mbti-image {
+    transform: scale(1.1);
+}
+
+/* 제목 및 설명 텍스트 스타일 */
+h2 {
+    font-size: 24px;
+    color: #5f6a7d;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* 맨 아래 마지막 부분 나타나는 애니메이션 효과 */
+.fcontainer {
+    width: 400px;
+    height: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    /* 🔽 변경: absolute → relative */
+    position: relative;
+    margin: 100px auto;
+    /* 자동 정렬 및 위아래 여백 추가 */
+    animation: float 3s ease-in-out infinite;
+    /* 애니메이션을 부여 */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0; /* 처음에는 안 보이도록 */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 부드럽게 변화 */
+    transform: translateY(50px); /* 아래에서 시작 */
+}
+
