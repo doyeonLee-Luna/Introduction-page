@@ -5,10 +5,10 @@
 📌 **Live Demo:** [melodic-figolla-697d3f.netlify.app](https://melodic-figolla-697d3f.netlify.app)  
 
 
-![Page Preview1](page1.png)
-![Page Preview2](page2.png)
-![Page Preview3](page3.png)
-![Page Preview4](page4.png)
+![Page Preview1](/DoyeonLee/preview/page1.png)
+![Page Preview2](/DoyeonLee/preview/page2.png)
+![Page Preview3](/DoyeonLee/preview/page3.png)
+![Page Preview4](/DoyeonLee/preview/page4.png)
 
 ## ✨ Features  
 ✅ Simple and clean UI  
